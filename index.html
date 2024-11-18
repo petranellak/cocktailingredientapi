@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      
+    <link rel="stylesheet" href="style.css" />
+    <title>Ingredient = What Cocktail?</title>
+
+    <style >
+      .container {
+        background-image: url("./img/lime.webp");
+        background-repeat: repeat;
+     background-size: 100%;
+        background-position: top;
+      }
+    </style>
+    
+
+  </head>
+
+  <body>
+    <a href="./randomDrink.html">Random Drink</a>
+   <!-- hero -->
+    <div class="container">
+      <div class="heading">
+      <h1 >Ingredient + Mix!</h1>
+      <h2 >What Cocktail can I make? &#127864;</h2>
+      </div>
+     
+      <!-- search bar -->
+<div class="input">
+  <form >
+  <input type="text" id="search" placeholder="Ingredient available? (one only)" value="vodka">
+  <!-- Javascript Library -->
+  <ion-icon name="search-circle-outline"></ion-icon>
+  
+</div>
+<button type="button" class="searchBtn" id="searchBtn">Search!</button>
+</form>
+
+
+<div id="gallery">
+<!-- <div class="containermake"> -->
+  
+<div id="drinkResult"></div>
+<!-- <div id="ingredientResult"></div> -->
+
+</div>
+
+<div class="nextprev">
+  <button type="button" class="btn " id="Prev">Prev</button>
+  <button type="button" class="btn " id="Next">Next</button>
+</div>
+
+
+</div>
+
+<!-- <div id="card"> -->
+<!-- <div id="instructions" class="instructions"></div> -->
+
+<!-- </div> -->
+
+<!-- <button type="button" class="makeBtn" id="makeBtn">Make this cocktail!</button> -->
+
+
+<!-- prev next button for maker cocktail -->
+
+
+
+
+<button type="button" class="contactBtn" id="contactBtn">Contact Me Here</button>
+
+
+<div id="contactMe"></div>
+
+</div>
+
+
+    
+
+<!-- footer -->
+
+<div id="footer">
+  <div class="footerstyle" >
+     
+    <li>
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">&copy; <span id='date'></span>&nbsp;
+        Ingredient + Mix </a>
+    </li>
+   
+  </div>
+  <script>
+    const year = new Date().getFullYear();
+    document.getElementById('date').innerHTML = year;
+  </script>
+</div>
+<!-- End: Footer -->
+
+
+  <script src="./script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+  </body>
+</html>
