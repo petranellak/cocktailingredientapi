@@ -10,6 +10,8 @@ const prev = document.getElementById('Prev');
 const next = document.getElementById('Next');
 let searchBox = document.getElementById("search");
 let gallery = document.getElementById("gallery");
+let contactMeDiv = document.getElementById("contactMe");
+
 
 // listeners
 
@@ -32,6 +34,9 @@ page = 0
 
 // Global variable for Contact details
 var myGlobalVariable = "Petranella Email:pkovacs@student.holmesglen.edu.au mobile:0421699789";
+let contactEmail = "pkovacs@student.holmesglen.edu.au"
+contactMeDiv.innerHTML = myGlobalVariable
+
 function contactMe(){
   console.log(myGlobalVariable);
 }
@@ -89,6 +94,7 @@ async function getInfo() {
     // gallery.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
   } else {
     try {
+      gallery.innerHTML = ""
       const res =  await fetch(urlInstructions + search)
      json = await res.json()
       console.log(json)

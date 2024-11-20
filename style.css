@@ -9,6 +9,11 @@
   --brandColor:#DAB894;
 }
 
+.search {
+  font-size: 3rem;
+  color: white;
+}
+
 body{
   /* box-sizing: border-box; */
   background-color: var(--brandColor);
