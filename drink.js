@@ -13,6 +13,7 @@ async function getDrink() {
     } catch (error) {
         console.log(error)
     }
+    
 }
 getDrink()
 function displayingDrink(res) {

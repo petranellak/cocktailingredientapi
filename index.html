@@ -8,6 +8,7 @@
       
     <link rel="stylesheet" href="style.css" />
     <title>Ingredient = What Cocktail?</title>
+    <script src="./randomDrink.js" defer></script>
 
     <style >
       .container {
@@ -22,13 +23,15 @@
   </head>
 
   <body>
-    <a href="./randomDrink.html">Random Drink</a>
+    <!-- <a href="./randomDrink.html">Random Drink</a> -->
    <!-- hero -->
     <div class="container">
       <div class="heading">
       <h1 >Ingredient + Mix!</h1>
       <h2 >What Cocktail can I make? &#127864;</h2>
       </div>
+
+      <div id="galleryrandom"></div>
      
       <!-- search bar -->
       <!--sharp-->
@@ -37,50 +40,40 @@
   <input type="text" id="search" placeholder="Ingredient available? (one only)" value="vodka">
   <!-- Javascript Library -->
 
-  
 </div>
-<button type="button" class="searchBtn" id="searchBtn"> <ion-icon name="search-circle-outline" class="search"></ion-icon> Search!</button>
-<ion-icon name="heart"></ion-icon> <!--filled-->
-      <ion-icon name="heart-outline"></ion-icon> <!--outline-->
-      <ion-icon name="heart-sharp"></ion-icon> 
+<button type="button" class="searchBtn" id="searchBtn"> <ion-icon name="search-circle-outline" class="search"></ion-icon> </button>
 </form>
 
 
 <div id="gallery">
 <!-- <div class="containermake"> -->
   
-<div id="drinkResult"></div>
+<!-- <div id="drinkResult"></div> -->
 <!-- <div id="ingredientResult"></div> -->
 
 </div>
 
-<div class="nextprev">
-  <button type="button" class="btn " id="Prev">Prev</button>
-  <button type="button" class="btn " id="Next">Next</button>
-</div>
-
 
 </div>
 
-<!-- <div id="card"> -->
-<!-- <div id="instructions" class="instructions"></div> -->
-
-<!-- </div> -->
-
-<!-- <button type="button" class="makeBtn" id="makeBtn">Make this cocktail!</button> -->
 
 
-<!-- prev next button for maker cocktail -->
-
-
-
-
+<div>
 <button type="button" class="contactBtn" id="contactBtn">Contact Me Here</button>
 
 
 <div id="contactMe"></div>
-
 </div>
+
+
+<!-- </div> -->
+<!-- <div class="nextprev">
+  <button type="button" class="btn " id="Prev">Prev</button>
+  <button type="button" class="btn " id="Next">Next</button>
+</div> -->
+
+
+
 
 
     

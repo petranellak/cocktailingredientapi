@@ -6,8 +6,8 @@ let result = document.getElementById("drinkResult");
 let instructions = document.getElementById("instructions")
 let searchBtn = document.getElementById("searchBtn");
 // let makeBtn = document.getElementById("makeBtn")
-const prev = document.getElementById('Prev');
-const next = document.getElementById('Next');
+// const prev = document.getElementById('Prev');
+// const next = document.getElementById('Next');
 let searchBox = document.getElementById("search");
 let gallery = document.getElementById("gallery");
 let contactMeDiv = document.getElementById("contactMe");
@@ -18,8 +18,8 @@ let contactMeDiv = document.getElementById("contactMe");
 window.addEventListener("load", getInfo);
 searchBtn.addEventListener("click", getInfo);
 // makeBtn.addEventListener("click", getInstructions)
-prev.addEventListener("click", prevResult);
-next.addEventListener("click", nextResult);
+// prev.addEventListener("click", prevResult);
+// next.addEventListener("click", nextResult);
 contactBtn.addEventListener("click", contactMe );
 // prevPage.addEventListener("click", prevPage)
 // nextPage.addEventListener("click", nextPage)
@@ -33,7 +33,7 @@ page = 0
 
 
 // Global variable for Contact details
-var myGlobalVariable = "Petranella Email:pkovacs@student.holmesglen.edu.au mobile:0421699789";
+var myGlobalVariable = "Email Petranella :pkovacs@student.holmesglen.edu.au <br> mobile:0421699789";
 let contactEmail = "pkovacs@student.holmesglen.edu.au"
 contactMeDiv.innerHTML = myGlobalVariable
 
@@ -46,21 +46,21 @@ console.log(myGlobalVariable);
 
 // buttons for the gallery
 
-function prevPage (){
-  page++
-  result.innerHTML = `
-  <img src=${json.drinks[page].strDrinkThumb}>
-  <h2>${json.drinks[page].strDrink}</h2>
-  `;
+// function prevPage (){
+//   page++
+//   result.innerHTML = `
+//   <img src=${json.drinks[page].strDrinkThumb}>
+//   <h2>${json.drinks[page].strDrink}</h2>
+//   `;
 
-}
-function nextPage(){
- page++
- result.innerHTML = `
- <img src=${json.drinks[page].strDrinkThumb}>
- <h2>${json.drinks[page].strDrink}</h2>
- `;
-}
+// }
+// function nextPage(){
+//  page++
+//  result.innerHTML = `
+//  <img src=${json.drinks[page].strDrinkThumb}>
+//  <h2>${json.drinks[page].strDrink}</h2>
+//  `;
+// }
 
 // Next filtered searched drinks
 
@@ -104,14 +104,15 @@ async function getInfo() {
         console.log(json.drinks)
         gallery.innerHTML += `
         <div>
-        <img src=${json.drinks[i].strDrinkThumb}>
+        <a href="./drink.html?id=${json.drinks[i].strDrink}"> <img src=${json.drinks[i].strDrinkThumb}> </a>
         <h2>${json.drinks[i].strDrink}</h2>
-        <a href="./drink.html?id=${json.drinks[i].strDrink}">View Drink</a>
+        <a href="./drink.html?id=${json.drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
         </div>
         `;
       }
 
        searchBox.value = ""
+       
     } catch (error) {
       console.log(error)
       gallery.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
