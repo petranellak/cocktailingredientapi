@@ -6,7 +6,7 @@
 
 :root {
   --primaryColor: #1E201E ;
-  --complementaryColor: #c6e2e9;
+  --complementaryColor: #D9FF5C;
   --brandColor:#DAB894;
 }
 
@@ -36,22 +36,24 @@ body{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
   margin: 10px;
-  grid-gap: 65px;
+  grid-gap: 70px;
   color: white;
 }
 
 #gallery h2{
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-bottom: 0px;
   
   }
   
   #gallery a {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #D9FF5C;
     text-decoration: none;
     
     }
+
+    /* random gallery */
 
 #galleryrandom{
 
@@ -64,18 +66,18 @@ body{
   }
 
   #galleryrandom h2{
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 0px;
   }
 
   #galleryrandom a {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #D9FF5C;
     text-decoration: none;
     
     }
 
-
+   
 
   img{
     width: 100%;
@@ -87,25 +89,26 @@ body{
   }
   
 
- 
-
-section{
-  min-height:100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 50px 0;
-}
-
 
 .container{
   background-color: #1E201E;
-  width: 80%;
+  width: 85%;
   margin: auto;
   border-radius: 20px;
   text-align: center;
   overflow: auto;
+}
+
+.containerdrink{
+ 
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  overflow: auto;
+  background-size: 100%;
+  
 }
 
 
@@ -128,25 +131,17 @@ section{
   
 }
 
-.msg h3{
+ h3 {
   
-  color: #ef86ec;
-  font-size: 1.5rem;
-}
-
-.msgone h3{
-  
-  color: #ef86ec;
-  font-size: 1.5rem;
+  color: #D9FF5C;
+  font-size: 2.5rem;
 }
 
 html{
   font-family: 'quattrocento', sans-serif;
-  font-size: 10px;
+  font-size: 0.6rem;
+  margin: 10px;
 }
-
-
-
 
 /* contact Me button */
 
@@ -169,7 +164,6 @@ html{
   border-radius: 8px;
   font-size: 20px;
   padding: 8px 10px;
-  /* margin: 20px 20px; */
   color: #EEEBE7;
   background-color: #1e201e;
   display: block;
@@ -219,7 +213,6 @@ button {
 }
 
 
-
 .searchBtn {
   cursor: pointer;
   border: 5px solid #EEEBE7;
@@ -230,22 +223,7 @@ button {
   color: #EEEBE7;
   background-color: #3D4235;
   
-
 }
-
-.makeBtn {
-  cursor: pointer;
-  border: 5px solid #EEEBE7;
-  border-radius: 8px;
-  font-size: 15px;
-  padding: 8px 10px;
-  /* margin: 20px 20px; */
-  color: #EEEBE7;
-  background-color: #3D4235;
-  
-
-}
-
 
 
 .btn {
@@ -264,44 +242,43 @@ button {
   
 }
 
-/* Information */
+#backBtn{
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+  border: 5px solid #3D4235;
+  color: #3D4235;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 8px 10px;
+  margin: 20px 20px;
+  background-color: #D9FF5C;
+}
 
 
-/* .ingredient-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease-in;
-  opacity: 0;
-} */
-/* 
-.ingredient:hover .ingredient-info {
-  opacity: 1;
-} */
-
-#drinkResult {
+#drink {
   
   line-height: 2em;
   margin-bottom: 20px;
-  
+  font-size: 2.0rem;
+  align-content: center;
+
 }
 
-#drinkResult img {
-  width: 50%;
-  height: 50%;
-  object-fit: 80%;
-  border: 5px solid #DAB894;
-  border-radius: 10px;
-  /* padding: 10px 10px; */
+#drink img {
+  width: 60%;
+    height: 60%;
+    object-fit: cover;
+  border: 5px solid #D9FF5C;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  margin: 5rem;
+  
 }
-#drinkResult h2 {
-  font-size: 15px;
+#drink h2 {
+  font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
@@ -309,29 +286,46 @@ button {
   color: #3D4235;
   position: relative;
   margin-bottom: 20px;
+  margin: 10px;
   }
 
 
 
-  #instructions {
-    font-size: 15px;
+  #drink p{
+  font-size: 2.0rem;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
+  font-style: italic;
   letter-spacing: 0.05em;
   color: #3D4235;
   position: relative;
   margin-bottom: 10px;
+  margin: 10px;
   }
 
-  /* #ingredientResult img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 5px solid #DAB894;
-  border-radius: 8px;
-  padding: 10px 10px;
-  } */
+  #drink a{
+    
+      font-size: 8.0rem;
+      font-weight: 800;
+      color: #D9FF5C;
+      text-decoration: none;
+      padding-top: 20rem;
+      padding-right: 30rem;
+  }
 
+  
+
+  #drink .flex-container {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+   align-self: center;
+   text-decoration: none;
+   
+    
+  }
+
+/* 
   #ingredientresult ul {
     margin-bottom: 1em;
     margin-left: 1.8em;
@@ -346,7 +340,7 @@ button {
     font-weight: 400;
     font-size: 0.95em;
   }
-  
+   */
 
   /* footer */
 
@@ -403,60 +397,6 @@ button {
     .header ion-icon{
       font-size: 24px;
     }
-    /* .gallery{
-      grid-gap: 30px;
-    }
-     */
+    
    }
 
-
-/* .item{
-  width: 100%;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border-radius:8px;
-  transition: .3s ease box-shadow;
-  padding: 5px;
-  margin-bottom: 15px;
-} */
-
-/* .item:nth-last-child(1){
-  margin-bottom: 0;
-}
-
-.item h3{
-  width: 100%;
-  padding: 20px;
-  position: absolute;
-  background-color: #00000040;
-  color: #1E201E;
-  bottom: -70px;
-  font-weight: 300;
-  transition: .5s ease-in-out bottom;
-  font-size: 15px;
-  margin-bottom: 20px;
-
-}
-.item:hover h3{
-  bottom: 0;
-} */
-
-
-/* #card{
-
-  margin: auto;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #DAB894;
-  padding-top: 15px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-
-} */
-
-/* Contact Info */

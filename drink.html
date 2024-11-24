@@ -6,8 +6,53 @@
     <title>Drinks</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./drink.js" defer></script>
+
+    <style >
+        .containerdrink {
+          background-image: url("./img/pinkbackground.webp");
+          background-position: top;
+          
+        }
+      </style>
+
+
 </head>
+
 <body>
-    <div id="drink"></div>
-</body>
-</html>
+
+    <div class="containerdrink">
+
+    <div id="drink" class="flex-container"></div>
+
+<button type="button" class="backBtn" id="backBtn">  Back </button>
+
+</div>
+<!-- footer -->
+
+<div id="footer">
+    <div class="footerstyle" >
+       
+      <li>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">&copy; <span id='date'></span>&nbsp;
+          Ingredient + Mix </a>
+      </li>
+     
+    </div>
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById('date').innerHTML = year;
+    </script>
+  </div>
+  <!-- End: Footer -->
+  
+  
+    <!-- <script src="./script.js"></script> -->
+  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      
+
+    </body>
+  </html>
+  
+

@@ -5,7 +5,6 @@
 let result = document.getElementById("drinkResult");
 let instructions = document.getElementById("instructions")
 let searchBtn = document.getElementById("searchBtn");
-// let makeBtn = document.getElementById("makeBtn")
 // const prev = document.getElementById('Prev');
 // const next = document.getElementById('Next');
 let searchBox = document.getElementById("search");
@@ -17,12 +16,10 @@ let contactMeDiv = document.getElementById("contactMe");
 
 window.addEventListener("load", getInfo);
 searchBtn.addEventListener("click", getInfo);
-// makeBtn.addEventListener("click", getInstructions)
 // prev.addEventListener("click", prevResult);
 // next.addEventListener("click", nextResult);
 contactBtn.addEventListener("click", contactMe );
-// prevPage.addEventListener("click", prevPage)
-// nextPage.addEventListener("click", nextPage)
+
 
 // global storing data so can use next and prev button
 
@@ -64,21 +61,21 @@ console.log(myGlobalVariable);
 
 // Next filtered searched drinks
 
-function prevResult (){
-  page++
-  result.innerHTML = `
-  <img src=${json.drinks[page].strDrinkThumb}>
-  <h2>${json.drinks[page].strDrink}</h2>
-  `;
+// function prevResult (){
+//   page++
+//   result.innerHTML = `
+//   <img src=${json.drinks[page].strDrinkThumb}>
+//   <h2>${json.drinks[page].strDrink}</h2>
+//   `;
 
-}
-function nextResult(){
- page++
- result.innerHTML = `
- <img src=${json.drinks[page].strDrinkThumb}>
- <h2>${json.drinks[page].strDrink}</h2>
- `;
-}
+// }
+// function nextResult(){
+//  page++
+//  result.innerHTML = `
+//  <img src=${json.drinks[page].strDrinkThumb}>
+//  <h2>${json.drinks[page].strDrink}</h2>
+//  `;
+// }
 
 // API
 let urlInstructions = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
@@ -91,7 +88,7 @@ async function getInfo() {
   let search = searchBox.value
   if (search.length == 0) {
     // result instead of gallery
-    // gallery.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
+    
   } else {
     try {
       gallery.innerHTML = ""
@@ -134,7 +131,7 @@ async function getInstructions() {
        
        <div>${jsonInstructions.drinks[0].strInstructions}</div>
        `;
-       makeBtn.value = ""
+      //  contactMeDiv.value = ""
       //  instructionsDIV.innerHTML='';
     } catch (error) {
       console.log(error)
@@ -144,24 +141,24 @@ async function getInstructions() {
   }
 }
 
-async function getIngredients() {
-  if (search.length == 0) {
-    result.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
-  } else {
-    try {
-      const res =  await fetch(url + json.drinks[page].strMeasure.strIngredient)
-     jsonIgredients = await res.json()
-      console.log("ingredientResult", jsonInstructions)
-      instructions.innerHTML = `
+// async function getIngredients() {
+//   if (search.length == 0) {
+//     result.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
+//   } else {
+//     try {
+//       const res =  await fetch(url + json.drinks[page].strMeasure.strIngredient)
+//      jsonIgredients = await res.json()
+//       console.log("ingredientResult", jsonInstructions)
+//       instructions.innerHTML = `
        
-       <div>${jsonInstructions.drinks[0].strMeasure.strIngredient}</div>
-       `;
-       makeBtn.value = ""
-      //  instructionsDIV.innerHTML='';
-    } catch (error) {
-      console.log(error)
-      result.innerHTML = `<h3 class="msg">Whoops! </h3>`;
-      // e.target.reset();
-    } 
-  }
-}
+//        <div>${jsonInstructions.drinks[0].strMeasure.strIngredient}</div>
+//        `;
+//        makeBtn.value = ""
+//       //  instructionsDIV.innerHTML='';
+//     } catch (error) {
+//       console.log(error)
+//       result.innerHTML = `<h3 class="msg">Whoops! </h3>`;
+//       // e.target.reset();
+//     } 
+//   }
+// }
