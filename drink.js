@@ -3,12 +3,38 @@ const id = urlParams.get('id');
 const drink = document.getElementById('drink')
 console.log(id)
 
-let backBtn = document.getElementById('backBtn');
+// const prev = document.getElementById('Prev');
+// const next = document.getElementById('Next');
 
-backBtn.addEventListener("click", backBtn)
+// prev.addEventListener("click", prevResult)
+// next.addEventListener("click", nextResult)
+
+// let backBtn = document.getElementById("backBtn");
+// backBtn.addEventListener("click", getInfo);
 
 
 
+// function prevResult (){
+//     page++
+//     result.innerHTML = `
+//     <p>${res.drinks[page].strInstructions}</p>
+//     <div class="flex-container">
+//     <img src=${json.drinks[page].strDrinkThumb}>
+//     <a href ="${json.drinks[page].strVideo}"><ion-icon name="videocam-outline"></ion-icon> </a>
+//     </div>
+//     `;
+  
+//   }
+//   function nextResult(){
+//    page++
+//    result.innerHTML = `
+//    <p>${res.drinks[page].strInstructions}</p>
+//     <div class="flex-container">
+//     <img src=${json.drinks[page].strDrinkThumb}>
+//     <a href ="${json.drinks[page].strVideo}"><ion-icon name="videocam-outline"></ion-icon> </a>
+//     </div>
+//    `;
+//   }
 
 
 
@@ -36,6 +62,7 @@ function displayingDrink(res) {
     `
 
 }
+
 
 // function backBtn (){
 //     page++

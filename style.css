@@ -111,6 +111,18 @@ body{
   
 }
 
+.containerlike{
+ 
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  overflow: auto;
+  background-size: 100%;
+  
+}
+
 
 /* fonts */
 
@@ -155,6 +167,7 @@ html{
   color: #3D4235;
   position: relative;
   margin-bottom: 25px;
+  text-decoration: none;
 
 }
 
@@ -170,7 +183,12 @@ html{
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-decoration: none;
 
+}
+
+.contactBtn a{
+  text-decoration: none;
 }
 
 /* Input and Search */
@@ -205,6 +223,7 @@ button {
   margin: 20px 20px;
   color: #EEEBE7;
   background-color: #3D4235;
+  text-decoration: none;
 }
 
 .search {
@@ -239,6 +258,7 @@ button {
   padding: 8px 10px;
   margin: 20px 20px;
   background-color: #D9FF5C;
+  text-decoration: none;
   
 }
 
@@ -277,6 +297,20 @@ button {
   margin: 5rem;
   
 }
+
+#like img {
+  width: 60%;
+    height: 60%;
+    object-fit: cover;
+  border: 5px solid #D9FF5C;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  margin: 5rem;
+  
+}
+
+
 #drink h2 {
   font-size: 4rem;
   text-align: center;
@@ -324,6 +358,47 @@ button {
    
     
   }
+
+  /* Submit Form */
+
+  
+  #contact-form .form.floating {
+    max-width: 50%;
+
+    
+  }
+
+    
+    #contact-form label{
+    display: inline;
+    color: #4e312d;
+   
+    }
+
+    #contact-form input,
+    #contact-form textarea{
+    padding: 2rem;
+    border: 1px #3D4235 solid;
+    width: 80%;
+    height: 1rem;
+    font-size: 1rem;
+    border-radius: 10px; 
+    background-color: #1E201E;
+    }
+
+
+    #contactform .messagebox
+     textarea {
+    height: 4rem;
+    }
+    
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+    outline: none;
+    border-color: #D9FF5C;
+    /* border-width: ; */
+    
+    }
 
 /* 
   #ingredientresult ul {

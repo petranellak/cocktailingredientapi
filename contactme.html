@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Me Page</title>
+
+
+    <body>
+
+
+      <a href="./index.html"></a>
+      
+      <h1 >Contact Me Here</h1>
+      
+      <div class="formtitle">
+        
+</div>
+     
+<!-- <label for="floatingInput"> name </label> -->
+<section>
+
+          <form name="contactMe" onsubmit="return validateForm()">
+            
+            <div>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Name"
+              />
+            </div>
+            &nbsp;
+
+            
+            <div >
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Your e-mail"
+              />
+              
+            </div>
+            &nbsp;
+
+            <div >
+              <input
+                type="text"
+                id="message"
+                class="form-control"
+                placeholder="Send us a message"
+              />
+            </div>
+
+           
+              <button type="submit" class="submit" id="submit">Submit</button>
+            
+            
+          </form>
+        
+</section>
+
+<a href="./index.html">
+  <button type="button" class="searchBtn" id="backBtn">Back</button>
+  <div id="backBtn"></div></a>
+
+
+      
+          <!-- footer -->
+      
+      <div id="footer">
+        <div class="footerstyle" >
+           
+          <li>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">&copy; <span id='date'></span>&nbsp;
+              Ingredient + Mix </a>
+          </li>
+         
+        </div>
+        <script>
+          const year = new Date().getFullYear();
+          document.getElementById('date').innerHTML = year;
+        </script>
+      </div>
+      <!-- End: Footer -->
+      
+      
+        <script src="./contactme.js"></script>
+      
+          
+        </body>
+      </html>

@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drinks</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./drink.js" defer></script>
+    <script src="./script.js" defer></script>
 
-    <style >
-        .containerdrink {
-          background-image: url("./img/pinkbackground.webp");
-          background-position: top;
-          
-        }
-      </style>
+    <style>
+      .containerdrink {
+        background-image: url("./img/pinkbackground.webp");
+        background-position: top;
+      }
+    </style>
+  </head>
 
-
-</head>
-
-<body>
-
+  <body>
     <div class="containerdrink">
+      <div id="drink" class="flex-container"></div>
 
-    <div id="drink" class="flex-container"></div>
+      <!-- prev next button -->
 
-<button type="button" class="backBtn" id="backBtn">  Back </button>
+      <!-- <div class="nextprev">
+  <button type="button" class="btn " id="Prev">Prev</button>
+  <button type="button" class="btn " id="Next">Next</button>
+</div> -->
 
-</div>
-<!-- footer -->
-
-<div id="footer">
-    <div class="footerstyle" >
-       
-      <li>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">&copy; <span id='date'></span>&nbsp;
-          Ingredient + Mix </a>
-      </li>
-     
+      <a href="./index.html">
+        <button type="button" class="backBtn" id="backBtn">Back</button>
+      </a>
     </div>
-    <script>
-      const year = new Date().getFullYear();
-      document.getElementById('date').innerHTML = year;
-    </script>
-  </div>
-  <!-- End: Footer -->
-  
-  
+    <!-- footer -->
+
+    <div id="footer">
+      <div class="footerstyle">
+        <li>
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >&copy; <span id="date"></span>&nbsp; Ingredient + Mix
+          </a>
+        </li>
+      </div>
+      <script>
+        const year = new Date().getFullYear();
+        document.getElementById("date").innerHTML = year;
+      </script>
+    </div>
+    <!-- End: Footer -->
+
     <!-- <script src="./script.js"></script> -->
-  
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      
 
-    </body>
-  </html>
-  
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

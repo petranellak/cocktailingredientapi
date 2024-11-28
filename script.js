@@ -5,20 +5,16 @@
 let result = document.getElementById("drinkResult");
 let instructions = document.getElementById("instructions")
 let searchBtn = document.getElementById("searchBtn");
-// const prev = document.getElementById('Prev');
-// const next = document.getElementById('Next');
 let searchBox = document.getElementById("search");
 let gallery = document.getElementById("gallery");
-let contactMeDiv = document.getElementById("contactMe");
+// let contactMeDiv = document.getElementById("contactMe");
 
 
 // listeners
 
-window.addEventListener("load", getInfo);
+window.addEventListener("load", getData);
 searchBtn.addEventListener("click", getInfo);
-// prev.addEventListener("click", prevResult);
-// next.addEventListener("click", nextResult);
-contactBtn.addEventListener("click", contactMe );
+
 
 
 // global storing data so can use next and prev button
@@ -27,71 +23,60 @@ let json ={}
 page = 0
 
 
-
-
-// Global variable for Contact details
-var myGlobalVariable = "Email Petranella :pkovacs@student.holmesglen.edu.au <br> mobile:0421699789";
-let contactEmail = "pkovacs@student.holmesglen.edu.au"
-contactMeDiv.innerHTML = myGlobalVariable
-
-function contactMe(){
-  console.log(myGlobalVariable);
-}
-contactMe();
-console.log(myGlobalVariable);
-
-
-// buttons for the gallery
-
-// function prevPage (){
-//   page++
-//   result.innerHTML = `
-//   <img src=${json.drinks[page].strDrinkThumb}>
-//   <h2>${json.drinks[page].strDrink}</h2>
-//   `;
-
-// }
-// function nextPage(){
-//  page++
-//  result.innerHTML = `
-//  <img src=${json.drinks[page].strDrinkThumb}>
-//  <h2>${json.drinks[page].strDrink}</h2>
-//  `;
-// }
-
-// Next filtered searched drinks
-
-// function prevResult (){
-//   page++
-//   result.innerHTML = `
-//   <img src=${json.drinks[page].strDrinkThumb}>
-//   <h2>${json.drinks[page].strDrink}</h2>
-//   `;
-
-// }
-// function nextResult(){
-//  page++
-//  result.innerHTML = `
-//  <img src=${json.drinks[page].strDrinkThumb}>
-//  <h2>${json.drinks[page].strDrink}</h2>
-//  `;
-// }
-
 // API
 let urlInstructions = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 let url = "https://thecocktaildb.com/api/json/v1/1/filter.php?i="
 let baseurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+let randomurl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
   
-// Async function to wait for data
+
+// Get random pull
+
+async function getData() {
+
+    searchBox.value = '';
+
+    try {
+      
+      const res =  await fetch(baseurl)
+     const data = await res.json()
+     console.log('random data')
+      console.log(data.drinks)
+      const drinks = data.drinks;
+
+      // Displaying the results
+      for (let i = 0; i < drinks.length; i++) {
+        // console.log(drinks)
+        gallery.innerHTML += `
+        <div>
+        <a href="./drink.html?id=${drinks[i].strDrink}"> <img src=${drinks[i].strDrinkThumb}> </a>
+        <h2>${drinks[i].strDrink}</h2>
+        <a href="./drink.html?id=${drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
+        <a class="like-btn" data-drink="${drinks[i].strDrinkThumb}" href="./like.html"><ion-icon name="heart-half-outline"></ion-icon>
+</a>
+        </div>
+        `;
+      } 
+}
+catch(e) {
+        console.log(e)
+    }
+  
+}
+
+// Fot the search function
 
 async function getInfo() {
-  let search = searchBox.value
-  if (search.length == 0) {
-    // result instead of gallery
+  let search = searchBox.value;
+  console.log(search)
+  if (search.value) {
+    console.log(search)
+   
     
   } else {
     try {
       gallery.innerHTML = ""
+      
       const res =  await fetch(urlInstructions + search)
      json = await res.json()
       console.log(json)
@@ -104,6 +89,8 @@ async function getInfo() {
         <a href="./drink.html?id=${json.drinks[i].strDrink}"> <img src=${json.drinks[i].strDrinkThumb}> </a>
         <h2>${json.drinks[i].strDrink}</h2>
         <a href="./drink.html?id=${json.drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
+        <a class="like-btn" data-drink="${json.drinks[i].strDrinkThumb}" ><ion-icon name="heart-half-outline"></ion-icon>
+</a>
         </div>
         `;
       }
@@ -131,8 +118,7 @@ async function getInstructions() {
        
        <div>${jsonInstructions.drinks[0].strInstructions}</div>
        `;
-      //  contactMeDiv.value = ""
-      //  instructionsDIV.innerHTML='';
+      
     } catch (error) {
       console.log(error)
       result.innerHTML = `<h3 class="msg">Whoops! </h3>`;
@@ -141,24 +127,3 @@ async function getInstructions() {
   }
 }
 
-// async function getIngredients() {
-//   if (search.length == 0) {
-//     result.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
-//   } else {
-//     try {
-//       const res =  await fetch(url + json.drinks[page].strMeasure.strIngredient)
-//      jsonIgredients = await res.json()
-//       console.log("ingredientResult", jsonInstructions)
-//       instructions.innerHTML = `
-       
-//        <div>${jsonInstructions.drinks[0].strMeasure.strIngredient}</div>
-//        `;
-//        makeBtn.value = ""
-//       //  instructionsDIV.innerHTML='';
-//     } catch (error) {
-//       console.log(error)
-//       result.innerHTML = `<h3 class="msg">Whoops! </h3>`;
-//       // e.target.reset();
-//     } 
-//   }
-// }
