@@ -12,7 +12,7 @@
 
 body{
   /* box-sizing: border-box; */
-  background-color: var(--brandColor);
+  background-color: #EEEBE7;
  
 }
 
@@ -22,12 +22,8 @@ body{
   box-sizing: border-box;
 }
 
-/* search function */
 
-#search .input{
-  font-size: 3rem;
-  color: #EEEBE7;
-}
+
 
 /* galleries sections containers */
 
@@ -35,8 +31,8 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
-  margin: 10px;
-  grid-gap: 70px;
+  margin: 5px;
+  grid-gap: 40px;
   color: white;
 }
 
@@ -61,7 +57,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
     margin: 10px;
-    grid-gap: 65px;
+    grid-gap: 20px;
     color: white;
   }
 
@@ -80,15 +76,17 @@ body{
    
 
   img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     border: 5px solid #D9FF5C;
     border-radius: 8px;
    
   }
-  
 
+  
+  
+/* Containers  */
 
 .container{
   background-color: #1E201E;
@@ -113,6 +111,18 @@ body{
 .containermessage{
  
   width: 50%;
+  height: 60rem;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  overflow: auto;
+  background-size: 100%;
+  
+}
+
+.messagereturncontainer{
+ 
+  width: 50%;
   height: 50rem;
   margin: auto;
   border-radius: 20px;
@@ -122,17 +132,15 @@ body{
   
 }
 
-
-
 /* fonts */
 
 .heading h1{
 
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 700;
   letter-spacing: -2px;
   color: #DAB894;
-  -webkit-text-stroke: 1px #EEEBE7;
+  -webkit-text-stroke: 3px #3D4235;
 
 }
 
@@ -142,7 +150,7 @@ body{
   font-weight: 400;
   letter-spacing: -1px;
   color: #DAB894;
-  -webkit-text-stroke: 1px #EEEBE7;
+  -webkit-text-stroke: 1px #3D4235;
   
 }
 
@@ -187,21 +195,7 @@ input[type='text'] {
 
 
 
-/* contact Me button */
-
-
-#contactMe{
-  
-  font-size: 15px;
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #3D4235;
-  position: relative;
-  margin-bottom: 25px;
-  text-decoration: none;
-
-}
+/* Buttons */
 
 
 .contactBtn {
@@ -285,6 +279,7 @@ input[type='text'] {
   background-color: #D9FF5C;
 }
 
+/* Drinks Page */
 
 #drink {
   
@@ -307,8 +302,6 @@ input[type='text'] {
   
 }
 
-
-
 #drink h2 {
   font-size: 3rem;
   text-align: center;
@@ -320,8 +313,6 @@ input[type='text'] {
   margin-bottom: 20px;
   margin: 10px;
   }
-
-
 
   #drink p{
   font-size: 1.5rem;
@@ -356,6 +347,48 @@ input[type='text'] {
    
     
   }
+
+  /* message return page */
+.message{
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.paragraph {
+  text-align: center;
+  margin-bottom: 25px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  font-size: 1.5rem;
+  color:#DAB894;
+}
+
+.flowerimage img{
+  width: 35%;
+    height: 35%;
+    object-fit: cover;
+  border: 1px solid #3D4235;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  
+}
+
+.info-container {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-style: italic;
+  color: #1e201e;
+  position: relative;
+  margin-bottom: 10px;
+  margin: 10px;
+  
+  
+}
+
 
   /* Contact me form */
 
