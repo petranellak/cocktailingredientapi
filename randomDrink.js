@@ -18,8 +18,7 @@ async function getRandom(){
       <a href="./drink.html?id=${res.drinks[i].strDrink}"><img src=${res.drinks[i].strDrinkThumb}> </a>
       <h2>${res.drinks[i].strDrink}</h2>
        <a href="./drink.html?id=${res.drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
-       <a class="like-btn" data-drinks="${json.drinks[i].strDrinkThumb}" href="./like.html"><ion-icon name="heart-half-outline"></ion-icon>
-</a>
+       
       </div>
       `;
     }

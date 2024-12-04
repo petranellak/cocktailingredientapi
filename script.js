@@ -52,8 +52,6 @@ async function getData() {
         <a href="./drink.html?id=${drinks[i].strDrink}"> <img src=${drinks[i].strDrinkThumb}> </a>
         <h2>${drinks[i].strDrink}</h2>
         <a href="./drink.html?id=${drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
-        <a class="like-btn" data-drink="${drinks[i].strDrinkThumb}" href="./like.html"><ion-icon name="heart-half-outline"></ion-icon>
-</a>
         </div>
         `;
       } 
@@ -89,8 +87,7 @@ async function getInfo() {
         <a href="./drink.html?id=${json.drinks[i].strDrink}"> <img src=${json.drinks[i].strDrinkThumb}> </a>
         <h2>${json.drinks[i].strDrink}</h2>
         <a href="./drink.html?id=${json.drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
-        <a class="like-btn" data-drink="${json.drinks[i].strDrinkThumb}" ><ion-icon name="heart-half-outline"></ion-icon>
-</a>
+        
         </div>
         `;
       }

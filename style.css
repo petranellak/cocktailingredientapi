@@ -24,9 +24,9 @@ body{
 
 /* search function */
 
-.search {
+#search .input{
   font-size: 3rem;
-  color: white;
+  color: #EEEBE7;
 }
 
 /* galleries sections containers */
@@ -101,8 +101,19 @@ body{
 
 .containerdrink{
  
-  width: 80%;
+  width: 70%;
   height: 100%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  overflow: auto;
+  
+}
+
+.containermessage{
+ 
+  width: 50%;
+  height: 50rem;
   margin: auto;
   border-radius: 20px;
   text-align: center;
@@ -111,17 +122,6 @@ body{
   
 }
 
-.containerlike{
- 
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  border-radius: 20px;
-  text-align: center;
-  overflow: auto;
-  background-size: 100%;
-  
-}
 
 
 /* fonts */
@@ -132,6 +132,8 @@ body{
   font-weight: 700;
   letter-spacing: -2px;
   color: #DAB894;
+  -webkit-text-stroke: 1px #EEEBE7;
+
 }
 
 .heading h2{
@@ -140,6 +142,7 @@ body{
   font-weight: 400;
   letter-spacing: -1px;
   color: #DAB894;
+  -webkit-text-stroke: 1px #EEEBE7;
   
 }
 
@@ -154,6 +157,35 @@ html{
   font-size: 0.6rem;
   margin: 10px;
 }
+
+/* Input and Search for search bar */
+
+input{
+  border: none;
+  border-bottom: 3px solid #D9FF5C;
+  font-size: 20px;
+  color: #EEEBE7;
+  width: 100%;
+  outline: none;
+  margin-top: 30px;
+  background-color: #1E201E;
+  padding: 10px 20px;
+}
+
+
+input[type='text'] {
+  width: 400px;
+  background-color: transparent;
+  text-align: center;
+  color: #D9FF5C;
+  font-size: 25px;
+}
+
+.input ::placeholder{
+  color: #c6e2e9;
+}
+
+
 
 /* contact Me button */
 
@@ -171,51 +203,25 @@ html{
 
 }
 
+
 .contactBtn {
   cursor: pointer;
-  border: 5px solid #eeebe7;
+  border: 5px solid #DAB894;
   border-radius: 8px;
   font-size: 20px;
   padding: 8px 10px;
-  color: #EEEBE7;
-  background-color: #1e201e;
+  color: #1e201e;
+  background-color: #c6e2e9;
   display: block;
   margin: auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   text-decoration: none;
 
 }
 
-.contactBtn a{
-  text-decoration: none;
-}
 
-/* Input and Search */
-
-input{
-  border: none;
-  border-bottom: 3px solid #D9FF5C;
-  font-size: 20px;
-  width: 100%;
-  outline: none;
-  margin-top: 30px;
-  background-color: #1E201E;
-  padding: 10px 20px;
-}
-
-
-input[type='text'] {
-  width: 400px;
-  background-color: transparent;
-  text-align: center;
-  color: #D9FF5C;
-  font-size: 25px;
-}
-
-/* Buttons */
-
-button {
+.button {
   border: 3px solid #EEEBE7;
   border-radius: 8px;
   font-size: 14px;
@@ -226,23 +232,26 @@ button {
   text-decoration: none;
 }
 
+/* search icon */
 .search {
   float: right;
   font-size: 40px;
+  
 }
 
 
 .searchBtn {
   cursor: pointer;
-  border: 5px solid #EEEBE7;
+  border: 3px solid #3D4235;
   border-radius: 8px;
   font-size: 20px;
   padding: 8px 10px;
   margin: 20px 20px;
-  color: #EEEBE7;
-  background-color: #3D4235;
+  color: #3D4235;
+  background-color: #c6e2e9;
   
 }
+
 
 
 .btn {
@@ -267,10 +276,10 @@ button {
   text-transform: uppercase;
   font-weight: 300;
   cursor: pointer;
-  border: 5px solid #3D4235;
+  border: 3px solid #3D4235;
   color: #3D4235;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 15px;
   padding: 8px 10px;
   margin: 20px 20px;
   background-color: #D9FF5C;
@@ -298,21 +307,10 @@ button {
   
 }
 
-#like img {
-  width: 60%;
-    height: 60%;
-    object-fit: cover;
-  border: 5px solid #D9FF5C;
-  border-radius: 8px;
-  display: block;
-  margin: auto;
-  margin: 5rem;
-  
-}
 
 
 #drink h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
@@ -326,11 +324,11 @@ button {
 
 
   #drink p{
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 500;
+  line-height: 1.8rem;
   font-style: italic;
-  letter-spacing: 0.05em;
   color: #3D4235;
   position: relative;
   margin-bottom: 10px;
@@ -359,63 +357,54 @@ button {
     
   }
 
-  /* Submit Form */
+  /* Contact me form */
 
+  #contact-form .form-control{
+    display: block;
+  margin: auto;
+  margin-top: 5px;
+  }
+
+  #contact-form input{
   
-  #contact-form .form.floating {
-    max-width: 50%;
-
-    
-  }
-
-    
-    #contact-form label{
-    display: inline;
-    color: #4e312d;
-   
-    }
-
-    #contact-form input,
-    #contact-form textarea{
-    padding: 2rem;
-    border: 1px #3D4235 solid;
+    border: 0.5px solid #3D4235;
+    font-size: 1.5rem;
+    border-radius: 10px;
     width: 80%;
-    height: 1rem;
-    font-size: 1rem;
-    border-radius: 10px; 
-    background-color: #1E201E;
-    }
+    background-color: transparent;
+    padding: 10px 20px;
+  }
+
+  #contact-form input[type='text'] {
+    width: 80%;
+    background-color: transparent;
+    text-align: center;
+    color: transparent;
+    font-size: 1.5rem;
+  }
+
+  #contact-form input[type='email'] {
+    width: 80%;
+    background-color: transparent;
+    text-align: center;
+    color: transparent;
+    font-size: 1.5rem;
+  }
 
 
-    #contactform .messagebox
-     textarea {
-    height: 4rem;
-    }
-    
-    #contact-form input:focus,
-    #contact-form textarea:focus {
-    outline: none;
-    border-color: #D9FF5C;
-    /* border-width: ; */
-    
+    #contact-form #submit{
+      cursor: pointer;
+  border: 3px solid #C6E2E9;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 8px 10px;
+  margin: 20px 20px;
+  color: #EEEBE7;
+  background-color: #3D4235;
+  display: block;
+  margin: auto;
     }
 
-/* 
-  #ingredientresult ul {
-    margin-bottom: 1em;
-    margin-left: 1.8em;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  #ingredientresult li {
-    margin-bottom: 0.3em;
-  }
-  #ingredientresult p {
-    text-align: justify;
-    font-weight: 400;
-    font-size: 0.95em;
-  }
-   */
 
   /* footer */
 

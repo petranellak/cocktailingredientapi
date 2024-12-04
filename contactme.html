@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="style.css" />
     <title>Contact Me Page</title>
 
+    <style >
+      .containermessage {
+        background-image: url("./img/orangecream.webp");
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+    </style>
 
     <body>
 
-
-      <a href="./index.html"></a>
+<div class="containermessage">
+      <h2 id="drink" style="color: #3D4235;">Contact Me Here</h2>
       
-      <h1 >Contact Me Here</h1>
-      
-      <div class="formtitle">
+      <!-- <div class="formtitle">
         
-</div>
+</div> -->
      
 <!-- <label for="floatingInput"> name </label> -->
-<section>
+<section id="contact-form" >
 
-          <form name="contactMe" onsubmit="return validateForm()">
+  
+          <form class="contact-form"  name="contactMe" onsubmit="return validateForm()">
             
             <div>
               <input
@@ -55,17 +61,22 @@
               />
             </div>
 
-           
-              <button type="submit" class="submit" id="submit">Submit</button>
-            
+            &nbsp;
+              <button type="submit" class="form-control submit" id="submit" >Submit</button>
+          
             
           </form>
         
 </section>
 
+
+
+</div>
+
 <a href="./index.html">
-  <button type="button" class="searchBtn" id="backBtn">Back</button>
-  <div id="backBtn"></div></a>
+  <button type="button" id="backBtn">Back</button>
+  </a>
+
 
 
       
