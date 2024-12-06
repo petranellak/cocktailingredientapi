@@ -1,5 +1,8 @@
+
+// container for info in HTML
 const infoContainer = document.querySelector('.info-container');
 
+// data in local storage
 const userData = JSON.parse(localStorage.getItem('userData'));
 
 

@@ -2,6 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+.montserrat-subrayada-regular {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-subrayada-bold {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* colour scheme */
 
 :root {
@@ -22,10 +36,13 @@ body{
   box-sizing: border-box;
 }
 
+html{
+  font-family: 'quattrocento', sans-serif;
+  font-size: 0.6rem;
+  margin: 10px;
+}
 
-
-
-/* galleries sections containers */
+/* galleries sections */
 
 #gallery {
   width: 100%;
@@ -33,7 +50,7 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
   margin: 5px;
   grid-gap: 40px;
-  color: white;
+  color: #EEEBE7;
 }
 
 #gallery h2{
@@ -58,7 +75,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
     margin: 10px;
     grid-gap: 20px;
-    color: white;
+    color: #EEEBE7;
   }
 
   #galleryrandom h2{
@@ -73,7 +90,7 @@ body{
     
     }
 
-   
+   /* images of the cocktail cards */
 
   img{
     width: 80%;
@@ -84,8 +101,6 @@ body{
    
   }
 
-  
-  
 /* Containers  */
 
 .container{
@@ -136,21 +151,24 @@ body{
 
 .heading h1{
 
-  font-size: 7rem;
+  font-size: 10rem;
   font-weight: 700;
   letter-spacing: -2px;
-  color: #DAB894;
-  -webkit-text-stroke: 3px #3D4235;
+  color: #D9FF5C;
+  -webkit-text-stroke: 3px #EEEBE7;
+  font-family: montserrat-subrayada-bold;
 
 }
 
 .heading h2{
 
-  font-size: 3.5rem;
+  font-size: 6rem;
   font-weight: 400;
+  font-style: italic;
   letter-spacing: -1px;
-  color: #DAB894;
-  -webkit-text-stroke: 1px #3D4235;
+  color: #D9FF5C;
+  -webkit-text-stroke: 1px #EEEBE7;
+  font-family: montserrat-subrayada-regular;
   
 }
 
@@ -160,11 +178,7 @@ body{
   font-size: 2.5rem;
 }
 
-html{
-  font-family: 'quattrocento', sans-serif;
-  font-size: 0.6rem;
-  margin: 10px;
-}
+
 
 /* Input and Search for search bar */
 
@@ -200,7 +214,7 @@ input[type='text'] {
 
 .contactBtn {
   cursor: pointer;
-  border: 5px solid #DAB894;
+  border: 5px solid #EEEBE7;
   border-radius: 8px;
   font-size: 20px;
   padding: 8px 10px;
@@ -236,7 +250,7 @@ input[type='text'] {
 
 .searchBtn {
   cursor: pointer;
-  border: 3px solid #3D4235;
+  border: 3px solid #EEEBE7;
   border-radius: 8px;
   font-size: 20px;
   padding: 8px 10px;
@@ -360,7 +374,7 @@ input[type='text'] {
   margin-bottom: 25px;
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   color:#DAB894;
 }
 
@@ -376,10 +390,10 @@ input[type='text'] {
 }
 
 .info-container {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   text-align: center;
   font-weight: 500;
-  line-height: 1.8rem;
+  line-height: 2.2rem;
   font-style: italic;
   color: #1e201e;
   position: relative;
@@ -406,13 +420,14 @@ input[type='text'] {
     width: 80%;
     background-color: transparent;
     padding: 10px 20px;
+    color: #1e201e;
   }
 
   #contact-form input[type='text'] {
     width: 80%;
     background-color: transparent;
     text-align: center;
-    color: transparent;
+    color:#1e201e;
     font-size: 1.5rem;
   }
 
@@ -420,7 +435,7 @@ input[type='text'] {
     width: 80%;
     background-color: transparent;
     text-align: center;
-    color: transparent;
+    color: #1E201E;
     font-size: 1.5rem;
   }
 
@@ -458,7 +473,6 @@ input[type='text'] {
     
   }
   
-  
   #footer .footerstyle  a {
     text-decoration: none;
     color: #1E201E;
@@ -475,6 +489,8 @@ input[type='text'] {
    text-decoration: none;
     
   }
+
+  /* responsive */
 
   @media only screen and (min-width: 900px){
     .container{

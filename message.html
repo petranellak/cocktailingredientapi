@@ -6,72 +6,54 @@
 
     <link rel="stylesheet" href="style.css" />
     <title>Message</title>
-
-    
   </head>
   <body>
-     
-    <!-- <div class="containerdrink">
-      <div id="drink" class="flex-container"></div>
+    <div id="messagereturncontainer">
+      <div id="messagereturn flex-container">
+        <!--  message box -->
+        <div class="message">
+          <h2 style="color: #3d4235; font-size: 3rem">
+            Thank for your Inquiry
+          </h2>
+        </div>
 
+        <p class="paragraph">We will get back to you ASAP</p>
 
-      <a href="./index.html">
-        <button type="button" class="backBtn" id="backBtn">Back</button>
-      </a>
-    </div> -->
+        <!-- info from local storage -->
+        <div class="info-container"></div>
 
-      <div id="messagereturncontainer">
-<div id="messagereturn flex-container">
-
-
-<div class="message">
-     <h2 style="color: #3D4235;">Thank for your Inquiry </h2>
-     
-    </div>
-    
-    <p class="paragraph"> We will get back to you ASAP</p>
-    
-    <div class="info-container"></div>
-
-    <div class="flowerimage">
-    <img src="./img/flower.webp" alt="orange flower in cocktail">
+        <div class="flowerimage">
+          <img src="./img/flower.webp" alt="orange flower in cocktail" />
+        </div>
+      </div>
     </div>
 
-     </div>
-    
-     </div>
-    
-
+    <!-- back button -->
     <a href="./index.html">
       <button type="button" class="backBtn" id="backBtn">Back</button>
     </a>
-  
-
-
 
     <script src="./formMessage.js"></script>
 
-<!-- footer -->
+    <!-- footer -->
 
-<div id="footer">
-  <div class="footerstyle">
-    <li>
-      <a
-        class="nav-link disabled"
-        href="#"
-        tabindex="-1"
-        aria-disabled="true"
-        >&copy; <span id="date"></span>&nbsp; Ingredient + Mix
-      </a>
-    </li>
-  </div>
-  <script>
-    const year = new Date().getFullYear();
-    document.getElementById("date").innerHTML = year;
-  </script>
-</div>
-<!-- End: Footer -->
-
-
+    <div id="footer">
+      <div class="footerstyle">
+        <li>
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >&copy; <span id="date"></span>&nbsp; Ingredient + Mix
+          </a>
+        </li>
+      </div>
+      <script>
+        const year = new Date().getFullYear();
+        document.getElementById("date").innerHTML = year;
+      </script>
+    </div>
+    <!-- End: Footer -->
   </body>
 </html>

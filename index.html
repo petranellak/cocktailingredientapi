@@ -6,89 +6,88 @@
 
     <link rel="stylesheet" href="style.css" />
     <title>Ingredient = What Cocktail?</title>
-    
-    
 
-    <style >
+    <style>
       .container {
         background-image: url("./img/shoe.webp");
         background-repeat: repeat;
-     background-size: 100%;
-     background-position: top;
+        background-size: 100%;
+        background-position: top;
       }
     </style>
-    
-
   </head>
 
-  
-
   <body>
-
-   <!-- hero -->
+    <!-- hero -->
     <div class="container">
       <div class="heading">
+        <div class="flex-container">
+          <a style="text-decoration: none" href="./contactme.html">
+            <button class="contactBtn" id="contactBtn">Contact Me Here</button>
+          </a>
+        </div>
 
-  <div class="flex-container">
-    
-    <a style="text-decoration:none" href="./contactme.html">
-    <button class="contactBtn" id="contactBtn">Contact Me Here</button>
-    </a>
-    
-    </div>
+        <h1>Ingredient + Mix!</h1>
 
-<h1 >Ingredient + Mix!</h1>
-      
-      <h2 >What Cocktail can I make? &#127864;</h2>
+        <h2>What Cocktail can I make? &#127864;</h2>
       </div>
 
-      <!-- random gallery -->
+      <!-- random gallery pull for index page -->
       <div id="galleryrandom"></div>
-     
+
       <!-- search bar -->
-      
-<div class="input" >
-  <form id="searchbar">
-  <input type="text" id="search" placeholder="Ingredient available? (one only)" value="vodka">
-  <!-- Javascript Library -->
 
-</div>
-<button type="button" class="searchBtn" id="searchBtn"> <ion-icon name="search-circle-outline" class="search"></ion-icon> </button>
-</form>
+      <div class="input">
+        <form id="searchbar">
+          <input
+            type="text"
+            id="search"
+            placeholder="Ingredient available? (one only)"
+            value="vodka"
+          />
 
+          <button type="button" class="searchBtn" id="searchBtn">
+            <ion-icon name="search-circle-outline" class="search"></ion-icon>
+          </button>
+        </form>
+      </div>
 
-<div id="gallery">
+      <!-- gallery for the results of search bar -->
+      <div id="gallery"></div>
+    </div>
 
+    <!-- footer -->
 
-</div>
+    <div id="footer">
+      <div class="footerstyle">
+        <li>
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >&copy; <span id="date"></span>&nbsp; Ingredient + Mix
+          </a>
+        </li>
+      </div>
+      <script>
+        const year = new Date().getFullYear();
+        document.getElementById("date").innerHTML = year;
+      </script>
+    </div>
+    <!-- End: Footer -->
 
+    <!-- javascript library -->
 
-</div>
-
-
-<!-- footer -->
-
-<div id="footer">
-  <div class="footerstyle" >
-     
-    <li>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">&copy; <span id='date'></span>&nbsp;
-        Ingredient + Mix </a>
-    </li>
-   
-  </div>
-  <script>
-    const year = new Date().getFullYear();
-    document.getElementById('date').innerHTML = year;
-  </script>
-</div>
-<!-- End: Footer -->
-
-<script src="./randomDrink.js"></script>
-  <script src="./script.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./randomDrink.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

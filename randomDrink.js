@@ -3,7 +3,7 @@ async function getRandom(){
       console.log("hello")
       let res = await fetch("http://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
       res = await res.json()
-      console.log(res)
+      // console.log(res)
       displayingRandomResults(res)
     }catch (error){
       console.log(error)

@@ -1,14 +1,27 @@
 
-
 // DOMS
-
+// drinksresult is the drinks from the search bar
 let result = document.getElementById("drinkResult");
+// the instructions as to how to make the selected drink
 let instructions = document.getElementById("instructions")
+// searchbtn adjacent searchbar
 let searchBtn = document.getElementById("searchBtn");
+// search bar
 let searchBox = document.getElementById("search");
+// gallery for search results
 let gallery = document.getElementById("gallery");
-// let contactMeDiv = document.getElementById("contactMe");
 
+
+// API's
+// API for instructions for making selected cocktail
+let urlInstructions = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+// Ingredient API pull for search bar
+let url = "https://thecocktaildb.com/api/json/v1/1/filter.php?i="
+// the API for the index page
+let baseurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+
+let randomurl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+  
 
 // listeners
 
@@ -17,38 +30,21 @@ searchBtn.addEventListener("click", getInfo);
 
 
 
-// global storing data so can use next and prev button
-
-let json ={}
-page = 0
-
-
-// API
-let urlInstructions = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
-let url = "https://thecocktaildb.com/api/json/v1/1/filter.php?i="
-let baseurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
-let randomurl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-  
-
 // Get random pull
 
 async function getData() {
-
+// clears searchbox value after last entry
     searchBox.value = '';
 
     try {
       
       const res =  await fetch(baseurl)
      const data = await res.json()
-     console.log('random data')
-      console.log(data.drinks)
       const drinks = data.drinks;
 
-      // Displaying the results
+      // Displaying results on the index landing page (margarita's)
       for (let i = 0; i < drinks.length; i++) {
-        // console.log(drinks)
-        gallery.innerHTML += `
-        <div>
+        gallery.innerHTML += `<div>
         <a href="./drink.html?id=${drinks[i].strDrink}"> <img src=${drinks[i].strDrinkThumb}> </a>
         <h2>${drinks[i].strDrink}</h2>
         <a href="./drink.html?id=${drinks[i].strDrink}"><ion-icon name="eye"></ion-icon></a>
@@ -59,27 +55,24 @@ async function getData() {
 catch(e) {
         console.log(e)
     }
-  
 }
 
-// Fot the search function
+// For the search function
 
 async function getInfo() {
   let search = searchBox.value;
   console.log(search)
-  if (search.value) {
-    console.log(search)
-   
-    
-  } else {
+  if (search.value === '') {
+    return;
+  } 
     try {
       gallery.innerHTML = ""
       
       const res =  await fetch(urlInstructions + search)
-     json = await res.json()
-      console.log(json)
+     const json = await res.json()
+      
 
-      // Displaying the results
+      // Displaying the results for the search results for a single ingredient
       for (let i = 0; i < json.drinks.length; i++) {
         console.log(json.drinks)
         gallery.innerHTML += `
@@ -91,17 +84,17 @@ async function getInfo() {
         </div>
         `;
       }
-
+// clear searchbox value
        searchBox.value = ""
-       
+      //  error message for more thanone ingredient ir misspelled ingredient
     } catch (error) {
       console.log(error)
       gallery.innerHTML = `<h3 class="msgone">Please list one ingredient!</h3>`;
     } 
-  }
+  
 }
 
-// async function for make instructions
+// function for pulling instructions
 
 async function getInstructions() {
   if (search.length == 0) {
@@ -119,7 +112,6 @@ async function getInstructions() {
     } catch (error) {
       console.log(error)
       result.innerHTML = `<h3 class="msg">Whoops! </h3>`;
-      // e.target.reset();
     } 
   }
 }

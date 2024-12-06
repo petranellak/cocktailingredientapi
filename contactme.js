@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       
-    
-  
+// Using local storage
       console.log(userInfo);
       localStorage.setItem('userData', JSON.stringify(userInfo))
       alert(`Thank you for submitting, ${nameInput}!`);
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateForm() {
 
-   
+  //  validation of form if entered wrong
     let x = document.forms["contactMe"]["name"].value;
     if (x == "") {
       alert("Please enter your name");
